@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.container {
+    min-height: 100vh;
+    padding: 88px 20px 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-margin-top: 72px;
+}
+
+.page-two {
+    background-color: #f2f2f2;
+}
+
+.page-two h1 {
+    margin: 0;
+    font-size: clamp(2rem, 6vw, 4rem);
+}
+
+.parent {
+    width: min(100%, 1100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-bar {
+    position: fixed;
+    z-index: 1;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(70rem, calc(100% - 32px));
+    min-height: 52px;
+    padding: 8px 16px;
+    border: 1px solid black;
+    border-radius: 40px;
+    background-color: rgb(10, 10, 10);
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: clamp(12px, 3vw, 24px);
+}
+
+.nav-bar h1 {
+    margin: 0 auto 0 0;
+    font-size: clamp(1rem, 2vw, 1.4rem);
+}
+
+.nav-bar a {
+    color: inherit;
+    white-space: nowrap;
+}
+
+.container-1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: clamp(12px, 3vw, 32px);
+}
+
+.box {
+    flex: 1 1 0;
+    min-width: 0;
+    aspect-ratio: 1;
+    border: 2px solid black;
+    background-color: rgb(6, 2, 235);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    column-gap: 0;
+    row-gap: clamp(24px, 8vw, 90px);
+}
+
+.box-1 {
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgb(5, 5, 5);
+    background-color: green;
+}
+
+.bottom-text {
+    width: min(45%, 520px);
+    margin-top: 20px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: rgb(8, 8, 8);
+    text-align: center;
+}
+
+.bottom-text h1,
+.bottom-text p {
+    margin: 0;
+}
+
+.bottom-text h1 {
+    font-size: clamp(1.25rem, 3vw, 2rem);
+}
+
+.bottom-text p {
+    font-size: clamp(0.75rem, 1.5vw, 0.95rem);
+    letter-spacing: clamp(0.5px, 0.3vw, 3px);
+    line-height: 1.6;
+}
+
+.bottom-text button {
+    padding: 10px 22px;
+    border: 1px solid #111;
+    border-radius: 30px;
+    background-color: #d3d619;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 80px 16px 24px;
+    }
+
+    .container-1 {
+        flex-direction: column;
+    }
+
+    .box {
+        flex-basis: auto;
+        width: 100%;
+    }
+
+    .bottom-text {
+        width: 100%;
+    }
+}
